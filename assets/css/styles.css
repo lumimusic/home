@@ -1,0 +1,600 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+
+:root {
+  --gradient-color: linear-gradient(90deg, hsl(288, 100%, 50%) 0%, hsl(275, 100%, 54%));
+  --black-color: hsl(225, 15%, 6%);
+  --reflection-color: hsla(48, 30%, 95%, .3);
+  --body-color: hsl(48, 100%, 98%);
+  --first-color: #12192C;
+  --second-color: #9d24de;
+  --white-color: #EDEDED;
+  --body-font: 'Quicksand', sans-serif;
+  --small-font-size: 0.875rem;
+}
+
+@media screen and (min-width: 768px) {
+  :root {
+    --small-font-size: 0.938rem;
+  }
+}
+
+:root {
+  --z-back: -10;
+  --z-normal: 1;
+  --z-tooltip: 10;
+  --z-fixed: 100;
+  --z-modal: 1000;
+}
+
+*, ::before, ::after {
+  box-sizing: border-box;
+}
+
+body {
+  position: relative;
+  margin: 0;
+  padding: 1rem 0 0 5rem;
+  font-family: var(--body-font);
+  background-color: var(--white-color);
+  transition: .5s;
+}
+
+h1 {
+  margin: 0;
+}
+
+ul, li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.l-navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 56px;
+  height: 100vh;
+  background-color: var(--first-color);
+  padding: 1.25rem .5rem 2rem;
+  transition: .5s;
+  z-index: var(--z-fixed);
+}
+
+.nav {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: hidden;
+}
+
+.nav__logo {
+  display: flex;
+  align-items: center;
+  margin-bottom: 2rem;
+  padding: 0 .5rem;
+}
+
+.nav__logo-icon {
+  margin-right: 1.2rem;
+}
+
+.nav__logo-text {
+  color: var(--white-color);
+  font-weight: 700;
+}
+
+.nav__toggle {
+  position: absolute;
+  top: 1.10rem;
+  right: -.6rem;
+  width: 18px;
+  height: 18px;
+  background-color: var(--second-color);
+  border-radius: 50%;
+  font-size: 1.25rem;
+  color: var(--first-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: .5s;
+}
+
+.nav__link {
+  display: flex;
+  align-items: center;
+  padding: .5rem;
+  margin-bottom: 1rem;
+  border-radius: .5rem;
+  color: var(--white-color);
+  transition: .3s;
+}
+
+.nav__link:hover {
+  background-color: var(--second-color);
+  color: var(--first-color);
+}
+
+.nav__icon {
+  font-size: 1.5rem;
+  margin-right: 1rem;
+}
+
+.nav__text {
+  font-weight: 700;
+}
+
+.show {
+  width: 168px;
+}
+
+.rotate {
+  transform: rotate(180deg);
+  transition: .5s;
+}
+
+.active {
+  background-color: var(--second-color);
+  color: var(--first-color);
+}
+
+.expander {
+  padding: 1rem 0 0 12rem;
+  transition: .5s;
+}
+
+.search-bar {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-bottom: 5px;
+  text-align: center;
+  flex-wrap: wrap;
+}
+
+.search-bar input,
+.search-bar select {
+  width: 30%;
+  padding: 10px;
+  border-radius: 25px;
+  border: 1px solid #ccc;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 10px;
+}
+
+@media screen and (max-width: 768px) {
+  .search-bar {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .search-bar input,
+  .search-bar select {
+    width: 80%;
+    margin-bottom: 10px;
+  }
+}
+
+.music-list {
+  background: #fff;
+  color: #000;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 2px 10px #12192C;
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  padding: 10px;
+  text-align: left;
+}
+
+th {
+  background-color: #222;
+  color: #fff;
+}
+
+td img {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+}
+
+.tag {
+  display: inline-block;
+  background-color: #eee;
+  color: #333;
+  padding: 5px 10px;
+  margin: 2px;
+  border-radius: 5px;
+}
+
+.music-control {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #12192C;
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 2px;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  width: 96.5%;
+  z-index: 1000;
+  height: 60px;
+}
+
+.music-control.show {
+  display: flex;
+}
+
+.music-control-cover {
+  width: 40px;
+  height: 40px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+.music-control-info {
+  margin-left: 10px; /* Giảm khoảng cách giữa ảnh và thông tin */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.music-control-title {
+  font-size: 18px; /* Tăng kích thước tiêu đề */
+  font-weight: bold;
+}
+
+.music-control-artist {
+  font-size: 14px;
+  color: #bbb;
+}
+
+.music-control-buttons {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center; /* Đưa các nút điều khiển ra giữa */
+  align-items: center;
+}
+
+.music-control-buttons i:hover {
+  color: #ff6464; /* Màu đỏ khi hover */
+  transform: scale(1.2); /* Phóng to nhẹ khi di chuột qua */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Bóng đổ nhẹ */
+}
+
+.music-control-progress {
+  display: flex;
+  align-items: center;
+}
+
+.music-control-buttons i {
+  margin: 0 15px; /* Giãn khoảng cách giữa các nút */
+  font-size: 24px;
+  cursor: pointer;
+  transition: color 0.3s ease, transform 0.3s ease;
+  outline: none;
+  box-shadow: none;
+  border: none;
+  transition: background-color 0.3s, transform 0.3s;
+  background-color: transparent; /* Loại bỏ nền mặc định nếu có */
+}
+
+.music-control-progress span {
+  margin: 0 10px;
+}
+
+#progress-bar {
+  width: 100%;
+  height: 5px; /* Tăng độ dày của thanh progress */
+  background-color: #ddd;
+  border-radius: 5px;
+  outline: none;
+  cursor: pointer;
+  appearance: none;
+}
+
+#progress-bar::-webkit-slider-thumb {
+  width: 15px;
+  height: 15px;
+  background-color: #4070f4;
+  border-radius: 50%;
+  cursor: pointer;
+  appearance: none;
+}
+
+#progress-bar::-moz-range-thumb {
+  width: 15px;
+  height: 15px;
+  background-color: #4070f4;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.music-control-buttons i.active {
+  color: #4070f4; /* Màu cho nút đang kích hoạt (như shuffle hoặc repeat) */
+  transform: scale(0.95); /* Thu nhỏ nhẹ khi nhấn */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Bóng đổ nhẹ hơn khi nhấn */
+  background-color: transparent; /* Đảm bảo không có nền */
+}
+
+/* Trạng thái focus để tăng tính khả dụng */
+.music-control-buttons i:focus {
+  outline: none;
+  box-shadow: 0 0 5px rgba(255, 100, 100, 0.7);
+  transform: scale(1.2);
+  color: #ff6464; /* Đổi màu khi focus */
+  background-color: transparent; /* Đảm bảo không có nền */
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+.animation-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  transition: transform 1s ease-out, opacity 1s ease-out;
+}
+
+.animation {
+  height: 95px;
+  display: flex;
+  transform: rotate(180deg);
+}
+
+.animation span {
+  width: 38px;
+  margin: 0 2px;
+  border-radius: 6px;
+  animation: loader 2s infinite;
+}
+
+@keyframes loader {
+  0%, 100% {
+    height: 15px;
+    background: #0081C9;
+  }
+  25% {
+    height: 95px;
+    background: #FFB100;
+  }
+  50% {
+    height: 50px;
+    background: #54B435;
+  }
+  75% {
+    height: 95px;
+    background: #FF6464;
+  }
+}
+
+.animation span:nth-child(1) {
+  animation-delay: .2s;
+}
+
+.animation span:nth-child(2) {
+  animation-delay: .4s;
+}
+
+.animation span:nth-child(3) {
+  animation-delay: .6s;
+}
+
+.animation span:nth-child(4) {
+  animation-delay: .8s;
+}
+
+.animation span:nth-child(5) {
+  animation-delay: 1s;
+}
+
+.animation-container.slide-up {
+  transform: translateY(-100%);
+  opacity: 0;
+}
+
+.contact-container {
+  min-height: calc(95vh - var(--header-height));
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.contact-left {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 20px;
+}
+
+.contact-left-title h2 {
+  font-weight: 600;
+  color: #000000;
+  font-size: 40px;
+  margin-bottom: 5px;
+}
+
+.contact-left-title hr {
+  border: none;
+  width: 120px;
+  height: 5px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.contact-inputs {
+  width: 400px;
+  height: 50px;
+  border: none;
+  outline: none;
+  padding-left: 25px;
+  font-weight: 500;
+  color: #666;
+  border-radius: 50px;
+}
+
+.contact-left textarea {
+  height: 140px;
+  padding-top: 15px;
+  border-radius: 20px;
+}
+
+.contact-inputs:focus {
+  border: 2px solid #ff994f;
+}
+
+.contact-inputs::placeholder {
+  color: #a9a9a9;
+}
+
+.contact-left button {
+  display: flex;
+  align-items: center;
+  padding: 15px 30px;
+  font-size: 16px;
+  color: #fff;
+  gap: 10px;
+  border: none;
+  border-radius: 50px;
+  background: linear-gradient(270deg, #ff994f, #fa6d86);
+  cursor: pointer;
+}
+
+.contact-left button img {
+  height: 15px;
+}
+
+.contact-right img {
+  width: 550px;
+  height: 500px;
+}
+
+@media (max-width: 800px) {
+  .contact-inputs {
+    width: 80vw;
+  }
+  .contact-right {
+    display: none;
+  }
+}
+
+::-webkit-scrollbar {
+  width: 15px;
+}
+
+::-webkit-scrollbar-track {
+  background: #d1e5ff;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(#642bff, #ff22e6);
+  border-radius: 10px;
+}
+
+/* From Uiverse.io by Madflows */ 
+.download-btn {
+  position: relative;
+  overflow: hidden;
+  height: 3rem;
+  padding: 0 2rem;
+  border-radius: 1.5rem;
+  background: #3d3a4e;
+  background-size: 400%;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+.download-btn:hover::before {
+  transform: scaleX(1);
+}
+
+.button-content {
+  position: relative;
+  z-index: 1;
+}
+
+.download-btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: scaleX(0);
+  transform-origin: 0 50%;
+  width: 100%;
+  height: inherit;
+  border-radius: inherit;
+  background: linear-gradient(
+    82.3deg,
+    rgba(150, 93, 233, 1) 10.8%,
+    rgba(99, 88, 238, 1) 94.3%
+  );
+  transition: all 0.475s;
+}
+
+#main-content {
+  display: block;
+  padding-bottom: 70px; /* Space for music control */
+}
+
+/* Ẩn thanh trượt âm lượng mặc định */
+.hidden {
+  display: none;
+}
+
+/* Phong cách cho thanh trượt âm lượng */
+.volume-control {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  position: relative;
+}
+
+.volume-control input[type="range"] {
+  width: 100px; /* Độ rộng của thanh trượt âm lượng */
+  -webkit-appearance: none;
+  appearance: none;
+  background-color: #ddd;
+  height: 5px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.volume-control input[type="range"]::-webkit-slider-thumb {
+  width: 15px;
+  height: 15px;
+  background-color: #4070f4;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.volume-control input[type="range"]::-moz-range-thumb {
+  width: 15px;
+  height: 15px;
+  background-color: #4070f4;
+  border-radius: 50%;
+  cursor: pointer;
+}

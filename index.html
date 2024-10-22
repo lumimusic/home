@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="shortcut icon" href="assets/images/logo.png" type="image/x-icon">
+    <title>LUMI Music - Home</title>
+</head>
+<body id="body">
+    <div id="loading-animation" class="animation-container">
+        <div class="animation">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+
+    <div id="main-content" style="display:none;">
+        <div class="l-navbar" id="navbar">
+            <nav class="nav">
+                <div>
+                    <a href="#" class="nav__logo">
+                        <img src="assets/icons/logo.svg" alt="" class="nav__logo-icon">
+                        <span class="nav__logo-text">LUMI Music</span>
+                    </a>
+                    <div class="nav__toggle" id="nav-toggle">
+                        <i class='bx bx-chevron-right'></i>
+                    </div>
+                    <ul class="nav__list">
+                        <a href="#" class="nav__link active">
+                            <i class='bx bx-grid-alt nav__icon'></i>
+                            <span class="nav__text">Home</span>
+                        </a>
+                        <a href="https://lumimusic.github.io/about" class="nav__link">
+                            <i class='bx bx-info-circle nav__icon'></i>
+                            <span class="nav__text">About</span>
+                        </a>
+                        <a href="https://lumimusic.github.io/follow" class="nav__link">
+                            <i class='bx bx-bell nav__icon' ></i>
+                            <span class="nav__text">Follow</span>
+                        </a>
+                        <a href="https://lumimusic.github.io/contact" class="nav__link">
+                            <i class='bx bx-message-square-detail nav__icon'></i>
+                            <span class="nav__text">Contact</span>
+                        </a>         
+                    </ul>
+                </div>
+            </nav>
+        </div>
+
+        <div class="search-bar">
+            <input type="text" id="search-input" placeholder="Search Tracks & Artists">
+            <select id="search-genres">
+                <option value="">Search Genres</option>
+                <option value="FutureBass">FutureBass</option>
+                <option value="R&B">R&B</option>
+                <option value="Pop">Pop</option>
+                <option value="Lofi">Lofi</option>
+                <option value="Melodic Rap">Melodic Rap</option>
+                <option value="Rap">Rap</option>
+                <option value="Indie">Indie</option>
+                <option value="Ballad">Ballad</option>
+                <option value="Hip-hop">Hip-hop</option>
+            </select>
+            <select id="search-moods">
+                <option value="">Search Moods</option>
+                <option value="Chill">Chill</option>
+                <option value="Uplifting">Uplifting</option>
+                <option value="Romantic">Romantic</option>
+                <option value="Emotional">Emotional</option>
+            </select>
+        </div>
+        <div class="music-list">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Genre</th>
+                        <th>Title</th>
+                        <th>Artist</th>
+                        <th>Genres & Moods</th>
+                        <th>Download</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr data-audio="assets/songs/this is what heartbreak feels like.mp3">
+                        <td><img src="assets/images/this is what heartbreak feels like.jpg" alt="Cover"></td>
+                        <td>this is what heartbreak feels like</td>
+                        <td>JVKE</td>
+                        <td>
+                            <span class="tag">Pop</span>
+                        </td>
+                        <td>
+                            <button class="download-btn" data-audio="assets/songs/this is what heartbreak feels like.mp3">
+                            <span class="button-content">Download </span>
+                            </button>
+                          </td>                          
+                    </tr>
+                    <tr data-audio="assets/songs/this is what sadness feels like.mp3">
+                        <td><img src="assets/images/this is what sadness feels like.jpg" alt="Cover"></td>
+                        <td>this is what sadness feels like</td>
+                        <td>JVKE</td>
+                        <td>
+                            <span class="tag">Pop</span>
+                        </td>
+                        <td>
+                            <button class="download-btn" data-audio="assets/songs/this is what sadness feels like.mp3">
+                                <span class="button-content">Download </span>
+                                </button>
+                        </td>
+                          
+                    </tr>
+                    <tr data-audio="assets/songs/save your breath.mp3">
+                        <td><img src="assets/images/save your breath.jpg" alt="Cover"></td>
+                        <td>save your breath</td>
+                        <td>JVKE</td>
+                        <td>
+                            <span class="tag">Pop</span>
+                        </td>
+                        <td>
+                            <button class="download-btn" data-audio="assets/songs/save your breath.mp3">
+                                <span class="button-content">Download </span>
+                                </button>
+                        </td>
+                    </tr>
+                    <tr data-audio="assets/songs/catch me.mp3">
+                        <td><img src="assets/images/catch me.jpg" alt="Cover"></td>
+                        <td>catch me</td>
+                        <td>JVKE</td>
+                        <td>
+                            <span class="tag">Pop</span>
+                        </td>
+                        <td>
+                            <button class="download-btn" data-audio="assets/songs/catch me.mp3">
+                                <span class="button-content">Download </span>
+                                </button>
+                        </td>
+                    </tr>
+                    <tr data-audio="assets/songs/this is what winter feels like.mp3">
+                        <td><img src="assets/images/this is what winter feels like.jpg" alt="Cover"></td>
+                        <td>this is what winter feels like</td>
+                        <td>JVKE</td>
+                        <td>
+                            <span class="tag">Pop</span>
+                        </td>
+                        <td>
+                            <button class="download-btn" data-audio="assets/songs/this is what winter feels like.mp3">
+                                <span class="button-content">Download </span>
+                                </button>
+                        </td>
+                    </tr>
+                    <tr data-audio="assets/songs/this is what autumn feels like.mp3">
+                        <td><img src="assets/images/this is what autumn feels like.jpg" alt="Cover"></td>
+                        <td>this is what autumn feels like</td>
+                        <td>JVKE</td>
+                        <td>
+                            <span class="tag">Pop</span>
+                        </td>
+                        <td>
+                            <button class="download-btn" data-audio="assets/songs/this is what autumn feels like.mp3">
+                                <span class="button-content">Download </span>
+                                </button>
+                        </td>
+                    </tr>
+                    <tr data-audio="assets/songs/this is what space feels like.mp3">
+                        <td><img src="assets/images/this is what space feels like.jpg" alt="Cover"></td>
+                        <td>this is what space feels like</td>
+                        <td>JVKE</td>
+                        <td>
+                            <span class="tag">Pop</span>
+                        </td>
+                        <td>
+                            <button class="download-btn" data-audio="assets/songs/this is what space feels like.mp3">
+                                <span class="button-content">Download </span>
+                                </button>
+                        </td>
+                    </tr>
+                    <tr data-audio="assets/songs/novocaine.mp3">
+                        <td><img src="assets/images/novocaine.jpg" alt="Cover"></td>
+                        <td>novocaine</td>
+                        <td>GenriX, CORBAL, Shiloh Dynastry</td>
+                        <td>
+                            <span class="tag">Lofi</span>
+                            <span class="tag">Sad</span>
+                        </td>
+                        <td>
+                            <button class="download-btn" data-audio="assets/songs/novocaine.mp3">
+                                <span class="button-content">Download </span>
+                                </button>
+                        </td>
+                    </tr>
+                    <tr data-audio="assets/songs/golden hour.mp3">
+                        <td><img src="assets/images/golden hour.jpg" alt="Cover"></td>
+                        <td>golden hour</td>
+                        <td>JVKE</td>
+                        <td>
+                            <span class="tag">Pop</span>
+                        </td>
+                        <td>
+                            <button class="download-btn" data-audio="assets/songs/golden hour.mp3">
+                                <span class="button-content">Download </span>
+                                </button>
+                        </td>
+                    </tr>
+                    <tr data-audio="assets/songs/this is what falling in love feels like.mp3">
+                        <td><img src="assets/images/this is what falling in love feels like.jpg" alt="Cover"></td>
+                        <td>this is what falling in love feels like</td>
+                        <td>JVKE</td>
+                        <td>
+                            <span class="tag">Pop</span>
+                        </td>
+                        <td>
+                            <button class="download-btn" data-audio="assets/songs/this is what falling in love feels like.mp3">
+                                <span class="button-content">Download </span>
+                                </button>
+                        </td>
+                    </tr>
+                    <tr data-audio="assets/songs/moon and back .mp3">
+                        <td><img src="assets/images/moon and back.jpg" alt="Cover"></td>
+                        <td>moon and back</td>
+                        <td>JVKE</td>
+                        <td>
+                            <span class="tag">Pop</span>
+                        </td>
+                        <td>
+                            <button class="download-btn" data-audio="assets/songs/moon and back.mp3">
+                                <span class="button-content">Download </span>
+                                </button>
+                        </td>
+                    </tr>
+                    <tr data-audio="assets/songs/i can't help it.mp3">
+                        <td><img src="assets/images/i can't help it.jpg" alt="Cover"></td>
+                        <td>i can't help it</td>
+                        <td>JVKE</td>
+                        <td>
+                            <span class="tag">Pop</span>
+                        </td>
+                        <td>
+                            <button class="download-btn" data-audio="assets/songs/i cant help it.mp3">
+                                <span class="button-content">Download </span>
+                                </button>
+                        </td>
+                    </tr>
+                    <tr data-audio="assets/songs/wonder if she loves me.mp3">
+                        <td><img src="assets/images/wonder if she loves me.jpg" alt="Cover"></td>
+                        <td>wonder if she loves me</td>
+                        <td>JVKE</td>
+                        <td>
+                            <span class="tag">Pop</span>
+                        </td>
+                        <td>
+                            <button class="download-btn" data-audio="assets/songs/wonder if she loves me.mp3">
+                                <span class="button-content">Download </span>
+                                </button>
+                        </td>
+                    </tr>
+                    <tr data-audio="assets/songs/ghost town.mp3">
+                        <td><img src="assets/images/ghost town.jpg" alt="Cover"></td>
+                        <td>ghost town</td>
+                        <td>JVKE</td>
+                        <td>
+                            <span class="tag">Pop</span>
+                        </td>
+                        <td>
+                            <button class="download-btn" data-audio="assets/songs/ghost town.mp3">
+                                <span class="button-content">Download </span>
+                                </button>
+                        </td>
+                    </tr>
+                    <tr data-audio="assets/songs/this is what falling out of love feels like.mp3">
+                        <td><img src="assets/images/this is what falling out of love feels like.jpg" alt="Cover"></td>
+                        <td>this is what falling out of love feels like</td>
+                        <td>JVKE</td>
+                        <td>
+                            <span class="tag">Pop</span>
+                        </td>
+                        <td>
+                            <button class="download-btn" data-audio="assets/songs/this is what falling out of feels like.mp3">
+                                <span class="button-content">Download </span>
+                                </button>
+                        </td>
+                    </tr>
+                    <tr data-audio="assets/songs/im not okay.mp3">
+                        <td><img src="assets/images/im not okay.jpg" alt="Cover"></td>
+                        <td>i'm not okay</td>
+                        <td>JVKE</td>
+                        <td>
+                            <span class="tag">Pop</span>
+                        </td>
+                        <td>
+                            <button class="download-btn" data-audio="assets/songs/im not okay.mp3">
+                                <span class="button-content">Download </span>
+                                </button>
+                        </td>
+                    </tr>
+                    <tr data-audio="assets/songs/this is what losing someone feels like.mp3">
+                        <td><img src="assets/images/this is what losing someone feels like.jpg" alt="Cover"></td>
+                        <td>this is what losing someone feels like</td>
+                        <td>JVKE</td>
+                        <td>
+                            <span class="tag">Pop</span>
+                        </td>
+                        <td>
+                            <button class="download-btn" data-audio="assets/songs/this is what losing someone feels like.mp3">
+                                <span class="button-content">Download </span>
+                                </button>
+                        </td>
+                    </tr>
+                    <tr data-audio="assets/songs/her.mp3">
+                        <td><img src="assets/images/her.jpg" alt="Cover"></td>
+                        <td>her</td>
+                        <td>JVKE</td>
+                        <td>
+                            <span class="tag">Pop</span>
+                        </td>
+                        <td>
+                            <button class="download-btn" data-audio="assets/songs/her.mp3">
+                                <span class="button-content">Download </span>
+                                </button>
+                        </td>
+                    </tr>
+                    <tr data-audio="assets/songs/this is what forever feels like.mp3">
+                        <td><img src="assets/images/this is what forever feels like.jpg" alt="Cover"></td>
+                        <td>this is what forever feels like</td>
+                        <td>JVKE, Nick Jonas</td>
+                        <td>
+                            <span class="tag">Pop</span>
+                        </td>
+                        <td>
+                            <button class="download-btn" data-audio="assets/songs/this is what forever feels like.mp3">
+                                <span class="button-content">Download </span>
+                                </button>
+                        </td>
+                    </tr>
+                    <tr data-audio="assets/songs/dont want a love song.mp3">
+                        <td><img src="assets/images/dont want a love song.jpg" alt="Cover"></td>
+                        <td>Don't Want A Love Song</td>
+                        <td>Bryant Barners</td>
+                        <td>
+                            <span class="tag">R&B</span>
+                            <span class="tag">Sad</span>
+                        </td>
+                        <td>
+                            <button class="download-btn" data-audio="assets/songs/dont want a love song.mp3">
+                                <span class="button-content">Download </span>
+                                </button>
+                        </td>
+                    </tr>
+                    <tr data-audio="assets/songs/id rather pretend.mp3">
+                        <td><img src="assets/images/id rather pretend.jpg" alt="Cover"></td>
+                        <td>I'd Rather Pretend</td>
+                        <td>Bryant Barners, d4vd</td>
+                        <td>
+                            <span class="tag">R&B</span>
+                            <span class="tag">Sad</span>
+                        </td>
+                        <td>
+                            <button class="download-btn" data-audio="assets/songs/id rather pretend.mp3">
+                                <span class="button-content">Download </span>
+                                </button>
+                        </td>
+                    </tr>
+                    <tr data-audio="assets/songs/want you all time.mp3">
+                        <td><img src="assets/images/want you all time.jpg" alt="Cover"></td>
+                        <td>Want You All The Time</td>
+                        <td>Bryant Barners</td>
+                        <td>
+                            <span class="tag">Sad</span>
+                            <span class="tag">R&B</span>
+                        </td>
+                        <td>
+                            <button class="download-btn" data-audio="assets/songs/want you all time.mp3">
+                                <span class="button-content">Download </span>
+                                </button>
+                        </td>
+                    </tr>
+                    <tr data-audio="assets/songs/losing you.mp3">
+                        <td><img src="assets/images/losing you.jpg" alt="Cover"></td>
+                        <td>Losing You</td>
+                        <td>Bryant Barners</td>
+                        <td>
+                            <span class="tag">R&B</span>
+                            <span class="tag">Sad</span>
+                        </td>
+                        <td>
+                            <button class="download-btn" data-audio="assets/songs/losing you.mp3">
+                                <span class="button-content">Download </span>
+                                </button>
+                        </td>
+                    </tr>
+                    <tr data-audio="assets/songs/give me a sign.mp3">
+                        <td><img src="assets/images/give me a sign.jpg" alt="Cover"></td>
+                        <td>Give Me A Sign</td>
+                        <td>Bryant Barners</td>
+                        <td>
+                            <span class="tag">Sad</span>
+                            <span class="tag">R&B</span>
+                        </td>
+                        <td>
+                            <button class="download-btn" data-audio="assets/songs/give me a sign.mp3">
+                                <span class="button-content">Download </span>
+                                </button>
+                        </td>
+                    </tr>  
+                    <tr data-audio="assets/songs/dont let it be you.mp3">
+                        <td><img src="assets/images/dont let it be you.jpg" alt="Cover"></td>
+                        <td>Don't Let It Be You</td>
+                        <td>Bryant Barners</td>
+                        <td>
+                            <span class="tag">Sad</span>
+                            <span class="tag">R&B</span>
+                        </td>
+                        <td>
+                            <button class="download-btn" data-audio="assets/songs/dont let it be you.mp3">
+                                <span class="button-content">Download </span>
+                                </button>
+                        </td>
+                    </tr>
+                    <tr data-audio="assets/songs/universe.mp3">
+                        <td><img src="assets/images/universe.jpg" alt="Cover"></td>
+                        <td>Universe</td>
+                        <td>Bryant Barners</td>
+                        <td>
+                            <span class="tag">Sad</span>
+                            <span class="tag">R&B</span>
+                        </td>
+                        <td>
+                            <button class="download-btn" data-audio="assets/songs/universe.mp3">
+                                <span class="button-content">Download </span>
+                                </button>
+                        </td>
+                    </tr>
+                    <tr data-audio="assets/songs/binh yen.mp3">
+                        <td><img src="assets/images/binh yen.jpg" alt="Cover"></td>
+                        <td>Bình Yên</td>
+                        <td>Vũ, Binz</td>
+                        <td>
+                            <span class="tag">Indie</span>
+                            <span class="tag">Hip-hop</span>
+                        </td>
+                        <td>
+                            <button class="download-btn" data-audio="assets/songs/binh yen.mp3">
+                                <span class="button-content">Download </span>
+                                </button>
+                        </td>
+                    </tr>
+                    <tr data-audio="assets/songs/khong yeu em thi yeu ai.mp3">
+                        <td><img src="assets/images/khong yeu em thi yeu ai.jpg" alt="Cover"></td>
+                        <td>Không Yêu Em Thì Yêu Ai</td>
+                        <td>Vũ, LowG</td>
+                        <td>
+                            <span class="tag">Indie</span>
+                            <span class="tag">Hip-hop</span>
+                        </td>
+                        <td>
+                            <button class="download-btn" data-audio="assets/songs/khong yeu em thi yeu ai.mp3">
+                                <span class="button-content">Download </span>
+                                </button>
+                        </td>
+                    </tr>           
+                    <tr data-audio="assets/songs/phong zin zin.mp3">
+                        <td><img src="assets/images/phong zin zin.jpg" alt="Cover"></td>
+                        <td>Phóng Zìn Zìn</td>
+                        <td>LowG, tlinh</td>
+                        <td>
+                            <span class="tag">Melodic Rap</span>
+                            <span class="tag">Hip-hop</span>
+                        </td>
+                        <td>
+                            <button class="download-btn" data-audio="assets/songs/phong zin zin.mp3">
+                                <span class="button-content">Download </span>
+                                </button>
+                        </td>
+                    </tr>
+                    <tr data-audio="assets/songs/buoc za di xa.mp3">
+                        <td><img src="assets/images/buoc za di xa.jpg" alt="Cover"></td>
+                        <td>Bước Za Đi Xa</td>
+                        <td>Wxrdie, Marlykid, Lucin3x</td>
+                        <td>
+                            <span class="tag">Melodic Rap</span>
+                            <span class="tag">Hip-hop</span>
+                        </td>
+                        <td>
+                            <button class="download-btn" data-audio="assets/songs/buoc za di xa.mp3">
+                                <span class="button-content">Download </span>
+                                </button>
+                        </td>
+                    </tr>  
+                    <tr data-audio="assets/songs/wrong times.mp3">
+                        <td><img src="assets/images/wrong times.jpg" alt="Cover"></td>
+                        <td>Wrong Times</td>
+                        <td>Puppy, Dangrangto</td>
+                        <td>
+                            <span class="tag">Rap</span>
+                            <span class="tag">Chill</span>
+                        </td>
+                        <td>
+                            <button class="download-btn" data-audio="assets/songs/wrong times.mp3">
+                                <span class="button-content">Download </span>
+                                </button>
+                        </td>
+                    </tr>
+                    <tr data-audio="assets/songs/chi mot dem nua thoi.mp3">
+                        <td><img src="assets/images/chi mot dem nua thoi.jpg" alt="Cover"></td>
+                        <td>Chỉ Một Đêm Nữa Thôi</td>
+                        <td>RPT MCK, tlinh</td>
+                        <td>
+                            <span class="tag">Melodic Rap</span>
+                            <span class="tag">Hip-hop</span>
+                            <span class="tag">Trap</span>
+                            <span class="tag">Indie</span>
+                        </td>
+                        <td>
+                            <button class="download-btn" data-audio="assets/songs/chi mot dem nua thoi.mp3">
+                                <span class="button-content">Download </span>
+                                </button>
+                        </td>
+                    </tr>
+                    <tr data-audio="assets/songs/anh da on hon.mp3">
+                        <td><img src="assets/images/anh da on hon.jpg" alt="Cover"></td>
+                        <td>Anh Đã Ổn Hơn</td>
+                        <td>RPT MCK</td>
+                        <td>
+                            <span class="tag">Melodic Rap</span>
+                            <span class="tag">Hip-hop</span>
+                        </td>
+                        <td>
+                            <button class="download-btn" data-audio="assets/songs/anh da on hon.mp3">
+                                <span class="button-content">Download </span>
+                                </button>
+                        </td>
+                    </tr>
+                    <tr data-audio="assets/songs/hu khong.mp3">
+                        <td><img src="assets/images/hu khong.jpg" alt="Cover"></td>
+                        <td>Hư Không</td>
+                        <td>KHA</td>
+                        <td>
+                            <span class="tag">Indie</span>
+                        </td>
+                        <td>
+                            <button class="download-btn" data-audio="assets/songs/hu khong.mp3">
+                                <span class="button-content">Download </span>
+                                </button>
+                        </td>
+                    </tr>
+                    <tr data-audio="assets/songs/ngoi nhin em khoc.mp3">
+                        <td><img src="assets/images/ngoi nhin em khoc.jpg" alt="Cover"></td>
+                        <td>Ngồi Nhìn Em Khóc</td>
+                        <td>Sáo (prod. Heki)</td>
+                        <td>
+                            <span class="tag">Chill</span>
+                            <span class="tag">Ballad</span>
+                        </td>
+                        <td>
+                            <button class="download-btn" data-audio="assets/songs/ngoi nhin em khoc.mp3">
+                                <span class="button-content">Download </span>
+                                </button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        
+        <div class="music-control">
+            <img src="" alt="Cover" class="music-control-cover">
+            <div class="music-control-info">
+                <div class="music-control-title">Title</div>
+                <div class="music-control-artist">Artist</div>
+            </div>
+            <div class="music-control-buttons">
+                <i class="fas fa-random" id="shuffle-button"></i>
+                <i class="fas fa-step-backward" id="prev-button"></i>
+                <i class="fas fa-play" id="play-pause-button"></i>
+                <i class="fas fa-step-forward" id="next-button"></i>
+                <i class="fas fa-redo-alt" id="repeat-button"></i>
+                <div class="volume-control"> <!-- Moved inside the control buttons -->
+                    <i class="fas fa-volume-up" id="volume-icon"></i>
+                    <input type="range" id="volume-slider" min="0" max="1" step="0.01" value="1" class="hidden">
+                </div>
+            </div>            
+            <div class="music-control-progress">
+                <span id="current-time">00:00</span>
+                <input type="range" id="progress-bar" value="0" max="100">
+                <span id="total-duration">00:00</span>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="assets/js/main.js"></script>
+</html>

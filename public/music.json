@@ -1,0 +1,124 @@
+{
+  "tracks": [
+    {
+      "id": "bdtnr-xnaxd",
+      "title": "Buông Đôi Tay Nhau Ra (x Nắng ấm xa dần Mashup)",
+      "artist": "Various",
+      "album": "Archive Sessions",
+      "year": 2019,
+      "cover": "https://i.imgur.com/6aZbS15.jpeg",
+      "duration": 0,
+      "embedUrl": "https://archive.org/embed/buong-doi-tay-nhau-ra-x-nang-am-xa-dan",
+      "tags": ["viet", "mashup", "archive"],
+      "lyrics": null,
+      "explicit": false
+    },
+    {
+      "id": "lofi-rain-01",
+      "title": "Lofi Rain Window",
+      "artist": "LoStudio",
+      "album": "Night Notes",
+      "year": 2024,
+      "cover": "https://i.imgur.com/7rXk6q1.jpeg",
+      "duration": 0,
+      "sources": [
+        {
+          "type": "audio",
+          "url": "https://cdn.example.com/audio/lofi-rain-window.mp3"
+        }
+      ],
+      "tags": ["lofi", "chill"],
+      "lyrics": null,
+      "explicit": false
+    },
+    {
+      "id": "accoustic-vi-01",
+      "title": "Bên Hiên Nhà",
+      "artist": "Acoustic Việt",
+      "album": "Mộc",
+      "year": 2023,
+      "cover": "https://i.imgur.com/1m2vZtJ.jpeg",
+      "duration": 0,
+      "embedUrl": "https://archive.org/embed/ben-hien-nha-demo",
+      "tags": ["acoustic", "viet"],
+      "lyrics": "public/lyrics/ben-hien-nha.lrc",
+      "explicit": false
+    },
+    {
+      "id": "jazz-evening-01",
+      "title": "Evening Jazz Cafe",
+      "artist": "Smooth Jazz Collective",
+      "album": "Midnight Sessions",
+      "year": 2023,
+      "cover": "https://i.imgur.com/8kL9mN2.jpeg",
+      "duration": 0,
+      "sources": [
+        {
+          "type": "audio",
+          "url": "https://cdn.example.com/audio/evening-jazz-cafe.mp3"
+        }
+      ],
+      "tags": ["jazz", "smooth", "instrumental"],
+      "lyrics": null,
+      "explicit": false
+    },
+    {
+      "id": "pop-viet-01",
+      "title": "Nơi Này Có Anh",
+      "artist": "Sơn Tùng M-TP",
+      "album": "Single",
+      "year": 2022,
+      "cover": "https://i.imgur.com/9pQ3rT4.jpeg",
+      "duration": 0,
+      "embedUrl": "https://archive.org/embed/noi-nay-co-anh-demo",
+      "tags": ["vpop", "ballad", "viet"],
+      "lyrics": null,
+      "explicit": false
+    },
+    {
+      "id": "electronic-01",
+      "title": "Neon Dreams",
+      "artist": "Synthwave Studio",
+      "album": "Retro Future",
+      "year": 2024,
+      "cover": "https://i.imgur.com/5tY8uV1.jpeg",
+      "duration": 0,
+      "sources": [
+        {
+          "type": "audio",
+          "url": "https://cdn.example.com/audio/neon-dreams.mp3"
+        }
+      ],
+      "tags": ["electronic", "synthwave", "instrumental"],
+      "lyrics": null,
+      "explicit": false
+    }
+  ],
+  "playlists": [
+    {
+      "id": "pl-trending",
+      "name": "Đang thịnh hành",
+      "cover": "https://i.imgur.com/xQK9R0o.jpeg",
+      "trackIds": ["bdtnr-xnaxd", "lofi-rain-01", "accoustic-vi-01", "pop-viet-01"]
+    },
+    {
+      "id": "pl-chill",
+      "name": "Chill Night",
+      "cover": "https://i.imgur.com/0kqD8bS.jpeg",
+      "trackIds": ["lofi-rain-01", "jazz-evening-01", "accoustic-vi-01"]
+    },
+    {
+      "id": "pl-viet",
+      "name": "Nhạc Việt Hay Nhất",
+      "cover": "https://i.imgur.com/2mK7nP9.jpeg",
+      "trackIds": ["bdtnr-xnaxd", "accoustic-vi-01", "pop-viet-01"]
+    },
+    {
+      "id": "pl-instrumental",
+      "name": "Instrumental Focus",
+      "cover": "https://i.imgur.com/4rL6sQ8.jpeg",
+      "trackIds": ["jazz-evening-01", "electronic-01", "lofi-rain-01"]
+    }
+  ]
+}
+

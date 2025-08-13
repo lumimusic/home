@@ -1,0 +1,103 @@
+{
+  "name": "Aurora Luxe Music",
+  "short_name": "Aurora Luxe",
+  "description": "Trải nghiệm nghe nhạc sang trọng và đẳng cấp",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0E0F13",
+  "theme_color": "#C7A26A",
+  "orientation": "portrait-primary",
+  "categories": ["music", "entertainment"],
+  "lang": "vi",
+  "icons": [
+    {
+      "src": "/icons/icon-72x72.png",
+      "sizes": "72x72",
+      "type": "image/png"
+    },
+    {
+      "src": "/icons/icon-96x96.png",
+      "sizes": "96x96",
+      "type": "image/png"
+    },
+    {
+      "src": "/icons/icon-128x128.png",
+      "sizes": "128x128",
+      "type": "image/png"
+    },
+    {
+      "src": "/icons/icon-144x144.png",
+      "sizes": "144x144",
+      "type": "image/png"
+    },
+    {
+      "src": "/icons/icon-152x152.png",
+      "sizes": "152x152",
+      "type": "image/png"
+    },
+    {
+      "src": "/icons/icon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/icons/icon-384x384.png",
+      "sizes": "384x384",
+      "type": "image/png"
+    },
+    {
+      "src": "/icons/icon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    },
+    {
+      "src": "/icons/maskable-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Thư viện",
+      "short_name": "Library",
+      "description": "Mở thư viện nhạc",
+      "url": "/library",
+      "icons": [
+        {
+          "src": "/icons/icon-96x96.png",
+          "sizes": "96x96"
+        }
+      ]
+    },
+    {
+      "name": "Tìm kiếm",
+      "short_name": "Search",
+      "description": "Tìm kiếm bài hát",
+      "url": "/?search=true",
+      "icons": [
+        {
+          "src": "/icons/icon-96x96.png",
+          "sizes": "96x96"
+        }
+      ]
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "/screenshots/home-desktop.png",
+      "sizes": "1280x720",
+      "type": "image/png",
+      "form_factor": "wide",
+      "label": "Aurora Luxe Music - Trang chủ"
+    },
+    {
+      "src": "/screenshots/player-mobile.png",
+      "sizes": "390x844",
+      "type": "image/png",
+      "form_factor": "narrow",
+      "label": "Aurora Luxe Music - Trình phát"
+    }
+  ]
+}
+
